@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+        integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"
+        integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+        crossorigin="anonymous"></script>
+    <title>Survey</title>
+</head>
+
+<body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Your Match is:<span id="matchName"></span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="photo">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="text-center">Survey</h1>
+            <hr>
+            <h2 class="text-center">Dont be weird... or be :)
+            </h2>
+            <br>
+        </div>
+
+        <div class="form-group">
+            <div class="col-6">
+                <label for="exampleFormControlSelect1">Question 1: I love spending time outdoors!</label>
+                <select class="form-control" id="question1">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3 (Neutral)</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-6">
+                <label for="exampleFormControlSelect1">Question 2: I love soccer</label>
+                <select class="form-control" id="question2">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3 (Neutral)</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-6">
+                <label for="exampleFormControlSelect1">Question 3: I enjoy being around people.</label>
+                <select class="form-control" id="question3">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3 (Neutral)</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-6">
+                <label for="exampleFormControlSelect1">Question 4: I enjoy going to the movies.</label>
+                <select class="form-control" id="question4">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3 (Neutral)</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-6">
+                <label for="exampleFormControlSelect1">Question 5: I am a dog person.</label>
+                <select class="form-control" id="question5">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3 (Neutral)</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-6">
+                <label for="exampleFormControlSelect1">Question 6: I wish to travel the world.</label>
+                <select class="form-control" id="question6">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3 (Neutral)</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-6">
+                <label for="exampleFormControlSelect1">Question 7: I hate country music</label>
+                <select class="form-control" id="question7">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3 (Neutral)</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-6">
+                <label for="exampleFormControlSelect1">Question 8: I play a musical instrument.</label>
+                <select class="form-control" id="question8">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3 (Neutral)</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-6">
+                <label for="exampleFormControlSelect1">Question 9: Beach or the mountains?</i></label>
+                <select class="form-control" id="question9">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3 (Neutral)</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-6">
+                <label for="exampleFormControlSelect1">Question 10: Do you like bacon?</label>
+                <select class="form-control" id="question10">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3 (Neutral)</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                id="submitButton" href="exampleModal" data-toggle="modal">
+                Submit
+            </button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#submitButton").on("click", function () {
+                console.log("Button has been hit")
+                function validateForm() {
+                    var isValid = true;
+                    $('.validate').each(function () {
+                        if ($(this).val() === '') {
+                            isValid = false;
+                        }
+                    });
+                    $('.browser-default').each(function () {
+                        if ($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+                    return isValid;
+                }
+                if (validateForm() == true) {
+                    console.log("form valid")
+                    var newFriend = {
+                        name: $('#matchName').val().trim(),
+                        profilePic: $('#photo').val().trim(),
+                        scores: [
+                            $('#question1').val(),
+                            $('#question2').val(),
+                            $('#question3').val(),
+                            $('#question4').val(),
+                            $('#question5').val(),
+                            $('#question6').val(),
+                            $('#question7').val(),
+                            $('#question8').val(),
+                            $('#question9').val(),
+                            $('#question10').val(),
+                        ]
+                    };
+                    // AJAX post the data to the friends API.
+                    $.post("/api/friends", newFriend, function (data) {
+                        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                        $("#matchName").text(data.name);
+                        $("#photo").attr("src", data.photo);
+                        // Show the modal with the best match
+                        $("#exampleModal").modal("toggle");
+                    });
+                } else {
+                    alert("Please fill out all fields before submitting!");
+                }
+            })
+        });
+    </script>
+
+</body>
+
+</html>
